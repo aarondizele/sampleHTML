@@ -1,0 +1,29 @@
+@keyframes slides{
+    0%{
+        transform: translate3d(0px, 0px, 0px);
+        animation-timing-function: ease-in;
+    }
+    50%{
+        transform: translate3d(800px, 300px, 0px);
+        animation-timing-function: ease-out;
+        opacity: .3;
+    }
+    100%{
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
+
+.round{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #16a085;
+    margin: 50px;
+}
+/*.round:hover{
+    animation: slides 2s infinite;
+} -- Animation with @keyframes -- */ 
+.round:hover{
+    background-color: #3498db;
+    transition: background-color .5s cubic-bezier(0,1.05,1,.34) .2s;
+}
