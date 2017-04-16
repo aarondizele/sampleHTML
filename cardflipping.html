@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Card Flipping</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.card-container{
+			perspective: 700px;
+			-webkit-perspective: 700px; /* Chrome, Safari, Opera */
+		}
+		.card{
+			position: relative;
+			margin: 20px;
+			width: 200px;
+			height: 200px;
+			transition: all .6s ease;
+			transform-style: preserve-3d;
+		}
+		h1{
+			color: white;
+			font-family: sans-serif;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 200px;
+		}
+
+		.card:hover{
+			transform: rotateY(180deg);
+		}
+
+		.front, .back{
+			background: #5677fc;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 200px;
+			height: 200px;
+			backface-visibility: hidden;
+		}
+		.back{
+			transform: rotateY(180deg);
+		}
+		img{
+			width: 100%;
+			height: 100%;
+		}
+		h1{
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+<div class="card-container">
+	<div class="card">
+		<div class="front">
+			<h1>Hello</h1>
+		</div>
+		<div class="back">
+			<img src="images/1.jpeg">
+		</div>
+	</div>
+</div>
+</body>
+</html>
