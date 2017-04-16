@@ -1,0 +1,36 @@
+*{
+	box-sizing: border-box;
+}
+html,
+body{
+	font-family: sans-serif;
+	font-size: 16px;
+	background: #eee;
+	margin: 0;
+}
+
+header{
+	color: white;
+	padding: 20px 0;
+	background: #222;
+	text-align: center;
+}
+main{
+	max-width: 900%;
+	margin: 0 auto;
+	padding: 40px; 
+}
+.accordion{
+	opacity: 0;
+	background: white;
+	padding: 0 20px;
+	/*text-align: justify;*/
+	max-height: 0;
+	overflow: hidden;
+	transition: all 0.2s ease;
+}
+.accordion.open{
+	opacity: 1;
+	padding: 20px;
+	max-height: 100%;
+}
