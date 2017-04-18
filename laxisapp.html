@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Laxis App</title>
+	<link rel="stylesheet" type="text/css" href="laxisapp.css">
+	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<main>
+	
+	<div id="document">
+			<a href="#" class="short">learn more now <i class="ion-chevron-right"></i></a>
+
+			<h1> <span>Good at </span><br>
+			<span>business?</span></h1>
+		
+	</div>
+	<div id="overlay">
+		<div id="modal">
+			<div><i class="ion-close-round close"></i></div>
+			<div class="image-presentation"></div>
+			<div class="text"><p class="business">Business stuff in your inbox, all the time.</p>
+			<p>Sign up for our newsletter yo download this 200+ page secrets of business PDF!</p></div>
+			<form>
+				<input type="text" name="" placeholder="Email Address">
+				<input type="submit" name="" value="submit">
+			</form>
+		</div>
+	</div>
+
+
+
+</main>
+
+<script type="text/javascript">
+	
+	$(function(){
+
+		$('.short').click(function(){
+			$('#overlay').addClass('open');
+		});
+		$('.close').click(function(){
+			$('#overlay').removeClass('open');
+		});
+	});
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
