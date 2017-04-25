@@ -1,0 +1,51 @@
+@charset "UTF-8";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css";
+
+@keyframes tick{
+  0%{
+    transform: scale(0);
+  }
+  90%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+body {
+  background-color: #eee;
+  padding: 50px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 16px;
+  color: #666; }
+
+label {
+  cursor: pointer;
+  color: #666; }
+  label input[type="checkbox"] {
+    display: none; }
+    label input[type="checkbox"] + .label-text:before {
+      content: "";
+      font-family: "fontAwesome";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      width: 1em;
+      display: inline-block;
+      margin-right: 5px; }
+    label input[type="checkbox"]:checked + .label-text:before {
+      content: "";
+      color: #3498db; 
+      animation: tick .15s ease-in;
+    }
+    label input[type="checkbox"]:disabled + .label-text {
+      color: #aaa; }
+      label input[type="checkbox"]:disabled + .label-text:before {
+        content: "";
+        color: #ccc; }
+
+/*# sourceMappingURL=stylesheet.css.map */

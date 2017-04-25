@@ -1,0 +1,50 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+
+$river: #3498db
+$bgcolor: #eee
+$txtcolor: #666
+$ftfamily: 'Roboto', Helvetica, sans-serif
+
+body
+	background-color: $bgcolor
+	//margin: 0
+	padding: 50px
+	font-family: $ftfamily
+	font-size: 16px
+	color: $txtcolor
+
+
+label
+	cursor: pointer
+	color: $txtcolor
+	
+	input[type="checkbox"]
+		display: none
+		
+		+ .label-text:before
+			content: "\f096"
+			font-family: "fontAwesome"
+			speak: none
+			font-style: normal
+			font-weight: normal
+			font-variant: normal
+			text-transform: none
+			line-height: 1
+			-webkit-font-smoothing: antialiased
+			width: 1em
+			display: inline-block
+			margin-right: 5px
+
+		&:checked + .label-text:before
+			content: "\f14a"
+			color: $river
+			
+
+		&:disabled + .label-text
+			color: #aaa
+
+			&:before
+				content: "\f0c8"
+				color: #ccc
+
+
