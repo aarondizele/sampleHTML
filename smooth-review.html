@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sliding Menu</title>
+    <style>
+         body {
+            background-color: #EEE;
+            font-family: 'Roboto', Arial, sans-serif;
+            padding: 25px;
+            margin: 0;
+            overflow: auto;
+            font-size: 22px;
+            color: #666;
+        }
+        /*#menu{
+            position: fixed;
+            left: 0;
+            top: 0;
+            transform: translate3d(-100vw, 0, 0);
+            width: 100vw;
+            height: 100vh;
+        }
+        #menu.visible{
+            transform: translate3d(0vw, 0, 0);
+        }*/
+        #container li {
+            margin-bottom: 10px;
+        }
+        
+        #roundButton {
+            background-color: #96D9FF;
+            margin-bottom: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 10px solid #0065A6;
+            outline: none;
+            transition: transform .3s cubic-bezier(0, .52, 0, 1);
+        }
+        #roundButton:hover {
+            background-color: #96D9FF;
+            cursor: pointer;
+            border-color: #003557;
+            transform: scale(1.2, 1.2);
+        }
+        #roundButton:active {
+            border-color: #003557;
+            background-color: #FFF;
+        }
+        #slideMenu{
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background: #3498db;
+            transform: translate3d(-100vw, 0, 0);
+            transition: transform .4s cubic-bezier(0, .52, 0, 1);
+            overflow: hidden;
+            padding-top: 40px;
+            z-index: 100;
+        }
+        #slideMenu h2{
+            text-align: center;
+        }
+        #slideMenu h2 a{
+            color: #333;
+            margin-left: 15px;
+            text-decoration: none;
+        }
+        #slideMenu h2 a:hover{
+            text-decoration: underline;
+        }
+        #slideMenu.show{
+            transform: translate3d(0vw, 0, 0);
+        }
+        #hidding{
+            font-size: 30px;
+            color: white;
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-right: 15px;
+            margin-top: 20px; 
+        }
+        #hidding:hover{
+            cursor: pointer;
+            transform: scale(1.5, 1.5);
+        }
+        ul li{
+            position: relative;
+            list-style: none;
+            height: 50px;
+            display: block;
+            width: 200px;
+            padding: 0 10px 0 5px;
+            background: rgba(0,0,0,.08);
+            border-radius: 5px;
+        }
+        ul li span{
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+        ul li:before{
+            content: "";
+            margin-right: 10px;
+            height: 50px;
+            position: absolute;
+            left: -2px;
+        }
+        ul li:nth-child(1):before{
+            border-left: 6px solid #2ecc71;
+        }
+        ul li:nth-child(2):before{
+            border-left: 6px solid #3498db;
+        }
+        ul li:nth-child(3):before{
+            border-left: 6px solid #f1c40f;
+        }
+        ul li:nth-child(4):before{
+            border-left: 6px solid #8e44ad;
+        }
+        ul li:nth-child(5):before{
+            border-left: 6px solid #7f8c8d;
+        }
+        ul li:nth-child(6):before{
+            border-left: 6px solid #1abc9c;
+        }
+        ul li:nth-child(7):before{
+            border-left: 6px solid #e74c3c;
+        }
+        
+    </style>
+</head>
+<body>
+<div id="slideMenu">
+<div id="hidding">✕</div>
+<h2><a href="#">Home</a></h2>
+<h2><a href="#">About</a></h2>
+<h2><a href="#">Contact</a></h2>
+<h2><a href="#">Search</a></h2>
+</div>
+<button id="roundButton"></button>
+<div id="container">
+    <p>Can you spot the item that doesn't belong?</p>
+    <ul>
+        <li><span>Lorem</span></li>
+        <li><span>Ipsum</span></li>
+        <li><span>Dolor</span></li>
+        <li><span>Sit</span></li>
+        <li><span>Bumblebees</span></li>
+        <li><span>Aenean</span></li>
+        <li><span>Consectetur</span></li>
+    </ul>
+</div>
+
+<script>
+    let roundButton = document.querySelector('#roundButton');
+    let slideMenu = document.querySelector('#slideMenu');
+    let hiddingMenu = document.querySelector('#hidding');
+    roundButton.addEventListener('click', showMenu, false);
+    slideMenu.addEventListener('click', hideMenu, false);
+    hiddingMenu.addEventListener('click', hideMenu, false);
+    function showMenu(e){
+        slideMenu.classList.add('show');
+        hiddingMenu.classList.add('show');
+        document.body.style.overflow = "hidden";
+    }
+    function hideMenu(e){
+        slideMenu.classList.remove('show');
+        hiddingMenu.classList.remove('show');
+        e.stopProgation();
+        document.body.style.overflow = "auto";
+    }
+</script>
+
+</body>
+</html>
