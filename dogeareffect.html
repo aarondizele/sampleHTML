@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dog Ear Effect</title>
+	<meta charset="utf-8">
+</head>
+
+<style type="text/css">
+	
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto';
+	background: #eee;
+	font-size: 16px;
+}
+main{
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+div.box{
+	position: relative;
+	width: 180px;
+	height: 180px;
+	background: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	border-bottom: 4px solid #ccc;
+	padding-right: 25px;
+}
+div.ear:before, div.ear:after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+div.ear:after{
+	border-top: 20px solid transparent;
+	border-left: 20px solid #bdc3c7;
+}
+div.ear:before{
+	border-bottom: 20px solid transparent;
+	border-right: 20px solid #eee;
+}
+
+
+</style>
+<body>
+
+<main>
+	<div class="box ear">Lorem ipsum dolor siiit amet, consectetur adipisicing elit, sed do eiusmod.</div>
+</main>
+
+</body>
+</html>
