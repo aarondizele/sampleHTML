@@ -25,9 +25,14 @@ for(let i = 0; i < tabs.length; i++){
 	})
 }
 
-var hash = window.location.hash
-var a = document.querySelector('a[href="'+hash+'"]')
-if (a !== null && !a.classList.contains('active')){
-	showTabs(a)
+var hashChange = function(){
+	var hash = window.location.hash
+	var a = document.querySelector('a[href="'+hash+'"]')
+	if (a !== null && !a.classList.contains('active')){
+		showTabs(a)
+	}
 }
+window.addEventListener('hashchange', hashChange)
+hashChange()
+
 })();
