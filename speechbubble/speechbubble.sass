@@ -1,0 +1,83 @@
+$input-color: #3498db
+$output-color: #2ecc71
+$txt-color: #fff
+
+body
+	margin: 0
+	padding: 0
+	background: #eee
+	font-family: 'Roboto', sans-serif
+	font-size: 16px
+	font-weight: 300
+
+main
+	padding: 20px
+	// position: relative
+
+	.comments-input
+		width: auto
+		right: 5%
+		margin: 20px
+		position: absolute
+		bottom: 5%
+
+		.comment
+			width: 100%
+			margin-bottom: 20px
+
+			p
+				margin: 0 0 10px 0
+
+		.bubble
+			position: relative
+			background: $output-color
+			padding: 20px
+			color: $txt-color
+			border-radius: 4px
+			margin-left: 20px
+
+			&:after
+				content: ""
+				position: absolute
+				width: 0
+				height: 0
+				top: 20px
+				left: -14px
+				border-top: 10px solid transparent
+				border-bottom: 10px solid transparent
+				border-right: 15px solid $output-color
+
+
+
+	.comments-output
+		width: auto
+		left: 5%
+		margin: 20px
+		position: absolute
+		top: 50%
+
+		.comment
+			width: 100%
+			margin-bottom: 20px
+
+			p
+				margin: 0 0 10px 0
+
+		.bubble
+			position: relative
+			background: $input-color
+			padding: 20px
+			color: $txt-color
+			border-radius: 4px
+			margin-right: 20px
+
+			&:after
+				content: ""
+				position: absolute
+				width: 0
+				height: 0
+				top: 20px
+				right: -14px
+				border-top: 10px solid transparent
+				border-bottom: 10px solid transparent
+				border-left: 14px solid $input-color
