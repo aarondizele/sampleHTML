@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box; }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  color: #666;
+  font-weight: 400; }
+
+img {
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+a {
+  text-decoration: none;
+  color: #666; }
+
+li {
+  list-style: none; }
+
+.header {
+  height: 120px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+  .header .content-header {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative; }
+    .header .content-header .topheader {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      position: relative;
+      text-align: left;
+      padding: 34px 0; }
+      .header .content-header .topheader .logo {
+        height: 50px;
+        width: 120px;
+        padding: 10px;
+        position: relative;
+        left: -40px; }
+        .header .content-header .topheader .logo img {
+          height: 100%;
+          width: 100%; }
+      .header .content-header .topheader .actionsign {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 14px;
+        color: #666;
+        position: relative;
+        top: 5px; }
+        .header .content-header .topheader .actionsign div {
+          margin-left: 20px; }
+        .header .content-header .topheader .actionsign .sign {
+          color: #2ecc71; }
+        .header .content-header .topheader .actionsign .search i {
+          font-size: 18px;
+          color: #666;
+          font-weight: 700;
+          cursor: pointer; }
+          .header .content-header .topheader .actionsign .search i:hover {
+            color: #111; }
+        .header .content-header .topheader .actionsign .search input[type="search"] {
+          border: none;
+          font-family: "Roboto";
+          color: #333;
+          font-size: 14px;
+          outline: none;
+          display: none;
+          width: 160px; }
+        .header .content-header .topheader .actionsign .search.clicked {
+          transition: width 0.4s ease-out; }
+          .header .content-header .topheader .actionsign .search.clicked input[type="search"] {
+            display: inline-block; }
+    .header .content-header .separatorhead {
+      width: 100%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+    .header .content-header .subheader {
+      height: 50px;
+      position: relative;
+      left: -55px; }
+      .header .content-header .subheader ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: left; }
+        .header .content-header .subheader ul li {
+          margin-left: 20px; }
+          .header .content-header .subheader ul li a.home {
+            font-weight: 500;
+            color: #444; }
+          .header .content-header .subheader ul li a {
+            font-weight: 400;
+            font-size: 14px;
+            color: #666; }
+            .header .content-header .subheader ul li a:hover {
+              color: #444; }
+
+main {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative; }
+  main .footer {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    width: 100%;
+    padding-bottom: 10px; }
+    main .footer ul, main .footer ul li {
+      display: flex;
+      flex-direction: row;
+      margin-right: 20px; }
+      main .footer ul a, main .footer ul li a {
+        font-weight: 300;
+        font-size: 14px; }
+  main .body {
+    margin-bottom: 80px; }
+    main .body section.popular {
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      color: #333; }
+      main .body section.popular .bytop {
+        display: flex;
+        flex-direction: column; }
+        main .body section.popular .bytop .bytoptitle a, main .body section.popular .bytop .bytoptitle {
+          font-size: 24px;
+          font-weight: 600 !important;
+          color: #00ab6b;
+          margin: 0px 0 20px 0; }
+          main .body section.popular .bytop .bytoptitle a i, main .body section.popular .bytop .bytoptitle i {
+            font-size: 22px;
+            margin-left: 10px;
+            padding-top: -10px;
+            display: inline-block;
+            position: relative; }
+        main .body section.popular .bytop .bytopmain {
+          height: 360px;
+          display: flex;
+          flex-direction: row; }
+          main .body section.popular .bytop .bytopmain .bytopposter {
+            width: 70%;
+            padding: 0 30px 0 0; }
+            main .body section.popular .bytop .bytopmain .bytopposter .bytopposterimg {
+              height: 100%;
+              width: 100%;
+              background-image: url("https://cdn2.tnwcdn.com/wp-content/blogs.dir/1/files/2012/01/apple-ceo-steve-jobs11.jpg");
+              background-position: center center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              border-radius: 2px;
+              cursor: pointer; }
+          main .body section.popular .bytop .bytopmain .bytopsidebar {
+            width: 30%; }
+            main .body section.popular .bytop .bytopmain .bytopsidebar .bytopsidebartitle {
+              font-size: 26px;
+              font-weight: 600;
+              margin-bottom: 20px;
+              cursor: pointer; }
+            main .body section.popular .bytop .bytopmain .bytopsidebar .bytopsidebarcontent {
+              cursor: pointer;
+              line-height: 1.5; }
+          main .body section.popular .bytop .bytopmain .bytopsidebarfooter {
+            display: flex;
+            flex-direction: row;
+            margin-top: 30px; }
+            main .body section.popular .bytop .bytopmain .bytopsidebarfooter .bytopsidebarfooterimg {
+              width: 50px;
+              height: 50px;
+              background-image: url("http://vignette1.wikia.nocookie.net/althistory/images/d/df/Jobs.jpg/revision/latest?cb=20160625014706");
+              border-radius: 50%;
+              background-position: center center;
+              background-size: cover;
+              background-repeat: no-repeat;
+              margin-right: 10px; }
+            main .body section.popular .bytop .bytopmain .bytopsidebarfooter .bytopsidebarfootername {
+              padding-top: 5px;
+              cursor: pointer; }
+              main .body section.popular .bytop .bytopmain .bytopsidebarfooter .bytopsidebarfootername .bytopsidebarfootersubname {
+                font-size: 14px;
+                color: #00ab6b;
+                font-weight: 400;
+                margin-bottom: 2px; }
+              main .body section.popular .bytop .bytopmain .bytopsidebarfooter .bytopsidebarfootername .bytopsidebarfooterdate {
+                font-size: 13px;
+                font-weight: 400; }
+      main .body section.popular .subtop {
+        display: flex;
+        flex-direction: row; }
+        main .body section.popular .subtop .box {
+          width: 33.3%;
+          margin: 20px 0;
+          padding-right: 20px; }
+          main .body section.popular .subtop .box .topbox {
+            height: 170px;
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            margin: 10px 0; }
+            main .body section.popular .subtop .box .topbox img {
+              width: 100%;
+              height: 100%;
+              background-position: center center;
+              background-size: cover;
+              background-repeat: no-repeat; }
+          main .body section.popular .subtop .box .contentbox {
+            margin: 20px 0;
+            font-size: 22px;
+            font-weight: 600; }
+          main .body section.popular .subtop .box .footerbox {
+            display: flex;
+            flex-direction: row;
+            margin: 20px 0; }
+            main .body section.popular .subtop .box .footerbox .footerboximg {
+              width: 50px;
+              height: 50px;
+              margin-right: 10px;
+              background-position: center center;
+              background-size: cover;
+              background-repeat: no-repeat; }
+              main .body section.popular .subtop .box .footerbox .footerboximg img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%; }
+            main .body section.popular .subtop .box .footerbox .footerboxname .namefoot {
+              color: #00ab6b;
+              font-size: 14px; }
+            main .body section.popular .subtop .box .footerbox .footerboxname .timefoot {
+              font-size: 14px; }
+
+/*# sourceMappingURL=medium.css.map */

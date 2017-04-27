@@ -1,0 +1,299 @@
+$border : 1px solid rgba(0,0,0,.08)
+$green : #2ecc71
+$txtcolor: #333
+$green2: #00ab6b
+
+*
+    box-sizing: border-box
+html,
+body
+    margin: 0
+    padding: 0
+    font-family: 'Roboto'
+    color: #666
+    font-weight: 400
+
+img
+    height: 100%
+    width: 100%
+    background-position: center center
+    background-size: cover
+    background-repeat: no-repeat
+
+a
+    text-decoration: none
+    color: #666
+
+li
+    list-style: none
+
+
+// Main CSS
+
+.header
+    height: 120px
+    border-bottom: $border
+
+    .content-header
+        max-width: 1000px
+        margin: 0 auto
+        padding: 0
+        position: relative
+
+        .topheader
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            height: 50px
+            position: relative
+            text-align: left
+            padding: 34px 0
+            
+            .logo
+                height: 50px
+                width: 120px
+                padding: 10px
+                position: relative
+                left: -40px
+
+                img
+                    height: 100%
+                    width: 100%
+
+            .actionsign
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                font-size: 14px
+                color: #666
+                position: relative
+                top: 5px
+
+                div
+                    margin-left: 20px
+                .sign
+                    color: $green
+                
+                .search
+
+                    i
+                        font-size: 18px
+                        color: #666
+                        font-weight: 700
+                        cursor: pointer                             
+                        &:hover
+                            color: #111  
+
+                    input[type="search"]
+                        border: none
+                        font-family: 'Roboto'
+                        color: $txtcolor
+                        font-size: 14px
+                        outline: none
+                        display: none
+                        width: 160px
+
+                .search.clicked
+                    // transform: translateX(100px)
+                    transition: width .4s ease-out
+
+                    input[type="search"]
+                        display: inline-block
+
+                    
+
+
+        .separatorhead
+            width: 100%
+            border-bottom: $border
+        
+        .subheader
+            height: 50px
+            position: relative
+            left: -55px
+
+            ul
+                display: flex
+                flex-direction: row
+                justify-content: flex-start
+                align-items: left
+
+                li
+                    margin-left: 20px
+
+                    a.home
+                        font-weight: 500
+                        color: #444
+                    a
+                        font-weight: 400
+                        font-size: 14px
+                        color: #666
+                        &:hover
+                            color: #444
+
+
+main
+    display: flex
+    flex-direction: row
+    max-width: 1000px
+    margin: 0 auto
+    position: relative
+                    
+    .footer
+        display: flex
+        flex-direction: row
+        position: absolute
+        bottom: 0
+        border-top: $border
+        width: 100%
+        padding-bottom: 10px
+
+        ul, ul li
+            display: flex
+            flex-direction: row
+            margin-right: 20px
+
+            a
+                font-weight: 300
+                font-size: 14px
+
+    .body
+        margin-bottom: 80px
+        section.popular
+            padding: 20px 0
+            display: flex
+            flex-direction: column
+            color: #333
+
+            .bytop
+                display: flex
+                flex-direction: column
+
+                .bytoptitle a, ,.bytoptitle
+                    font-size: 24px
+                    font-weight: 600 !important
+                    color: $green2
+                    margin: 0px 0 20px 0
+                        
+                    i
+                        font-size: 22px
+                        margin-left: 10px
+                        padding-top: -10px
+                        display: inline-block
+                        position: relative
+
+                .bytopmain
+                    height: 360px
+                    display: flex
+                    flex-direction: row
+
+                    .bytopposter
+                        width: 70%
+                        padding: 0 30px 0 0
+                        .bytopposterimg
+                            height: 100%
+                            width: 100%
+                            background-image: url('https://cdn2.tnwcdn.com/wp-content/blogs.dir/1/files/2012/01/apple-ceo-steve-jobs11.jpg')
+                            background-position: center center
+                            background-repeat: no-repeat
+                            background-size: cover
+                            border-radius: 2px
+                            cursor: pointer
+                    .bytopsidebar
+                        width: 30%
+                        .bytopsidebartitle
+                            font-size: 26px
+                            font-weight: 600
+                            margin-bottom: 20px
+                            cursor: pointer
+                        .bytopsidebarcontent
+                            cursor: pointer
+                            line-height: 1.5
+                    
+                    .bytopsidebarfooter
+                        display: flex
+                        flex-direction: row
+                        margin-top: 30px
+                        .bytopsidebarfooterimg
+                            width: 50px
+                            height: 50px
+                            background-image: url('http://vignette1.wikia.nocookie.net/althistory/images/d/df/Jobs.jpg/revision/latest?cb=20160625014706')
+                            border-radius: 50%
+                            background-position: center center
+                            background-size: cover
+                            background-repeat: no-repeat
+                            margin-right: 10px
+                        .bytopsidebarfootername
+                            padding-top: 5px
+                            cursor: pointer
+                            .bytopsidebarfootersubname
+                                font-size: 14px
+                                color: $green2
+                                font-weight: 400
+                                margin-bottom: 2px
+                            .bytopsidebarfooterdate
+                                font-size: 13px
+                                font-weight: 400
+
+            .subtop
+                display: flex
+                flex-direction: row
+                .box
+                    width: 33.3%
+                    margin: 20px 0
+                    padding-right: 20px
+                    .topbox
+                        height: 170px
+                        width: 100%
+                        border: $border
+                        margin: 10px 0
+                        img
+                            width: 100%
+                            height: 100%
+                            background-position: center center
+                            background-size: cover
+                            background-repeat: no-repeat
+                    .contentbox
+                        margin: 20px 0 
+                        font-size: 22px
+                        font-weight: 600
+                    .footerbox
+                        display: flex
+                        flex-direction: row
+                        margin: 20px 0
+                        .footerboximg
+                            width: 50px
+                            height: 50px
+                            margin-right: 10px
+                            img
+                                width: 100%
+                                height: 100%
+                                border-radius: 50%
+                            background-position: center center
+                            background-size: cover
+                            background-repeat: no-repeat
+                        .footerboxname
+                            .namefoot
+                                color: $green2
+                                font-size: 14px
+                            .timefoot
+                                font-size: 14px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
