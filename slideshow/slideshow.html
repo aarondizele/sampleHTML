@@ -1,0 +1,98 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <title>slideshow</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="slideshow.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    </head>
+    <body>
+    <main>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 6</div>
+            <img src="https://s3-eu-west-1.amazonaws.com/appearhere/assets/issue3/Appear+Here_VRoberts138.jpeg" style="width:100%">
+            <!-- <div class="text">Caption Text</div> -->
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 6</div>
+            <img src="http://madeinshoreditch.co.uk/wp-content/uploads/2014/12/10676122_867195926632295_3232059108226135908_n_thumb.jpg" style="width:100%">
+            <!-- <div class="text">Caption Two</div> -->
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 6</div>
+            <img src="https://firebasestorage.googleapis.com/v0/b/laxiswebprestataire.appspot.com/o/russia.jpg?alt=media&token=b07084ff-1416-44b1-a6c2-4139ef561f79" style="width:100%">
+            <!-- <div class="text">Caption Three</div> -->
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 6</div>
+            <img src="http://017ceef6c63d58be7d0b-54fdb269da09e5374665f5eb35cabb49.r77.cf1.rackcdn.com/amuk/top-shop-appear-here-2.jpg" style="width:100%">
+            <!-- <div class="text">Caption Three</div> -->
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 6</div>
+            <img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAb_AAAAJGZmZDkyY2VjLTZhMTEtNDk5Ni05MmQ3LTgxOTFhOTNjNjYyOA.jpg" style="width:100%">
+            <!-- <div class="text">Caption Three</div> -->
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">6 / 6</div>
+            <img src="https://qph.ec.quoracdn.net/main-qimg-ca1f47bde4486318f5bcb3a91ad80763" style="width:100%">
+            <!-- <div class="text">Caption Three</div> -->
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)"><i class="ion-ios-arrow-left"></i></a>
+          <a class="next" onclick="plusSlides(1)"><i class="ion-ios-arrow-right"></i></a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+          <span class="dot" onclick="currentSlide(5)"></span> 
+          <span class="dot" onclick="currentSlide(6)"></span> 
+        </div>
+    </main>
+
+
+        <!--Script part-->
+        <script type="text/javascript">
+            
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1} 
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none"; 
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block"; 
+          dots[slideIndex - 1].className += " active";
+        }
+
+
+        </script>
+    </body>
+</html>
