@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thumbs up</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="">
+	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<style type="text/css">
+	body{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		font-size: 64px;
+		height: 100vh;
+	}
+</style>
+<body>
+<div class="ion-happy" onclick="clicked(this)"></div>
+<script type="text/javascript">
+	function clicked(x){
+		x.classList.toggle('ion-sad')
+	}
+</script>
+</body>
+</html>
