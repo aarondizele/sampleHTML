@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="toast.css">
+	<meta charset="uft-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<main>
+		<button class="btn" onclick="toast()">Click me</button>
+
+		<div id="snackbar">Snackbar text that will last for 3 seconds</div>
+	</main>
+
+
+
+
+	<script>
+		
+		
+
+		function toast(){
+			var x = document.getElementById("snackbar")
+			x.className = 'show';
+
+			setTimeout(function(){x.className = x.className.replace("show", "");},3000);
+		}
+
+	</script>
+</body>
+</html>

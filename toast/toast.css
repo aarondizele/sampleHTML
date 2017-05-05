@@ -1,0 +1,66 @@
+*{
+	box-sizing: border-box;
+}
+html,
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+}
+main{
+	padding: 100px;
+}
+button.btn{
+	font-size: 18px;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	padding: 12px 18px;
+	/*border: 1px solid rgba(0,0,0,.04);*/
+	border: none;
+	background-color: #3498db;
+	border-radius: 5px;
+	outline: none;
+	color: #FFF;
+	text-transform: uppercase;
+	margin: 0 0 20px 0;
+	cursor: pointer;
+	box-shadow: 3px 5px 6px -1px rgba(0,0,0,.28);
+	transition: .1s;
+}
+button.btn:active{
+	transform: translateY(2px);
+	box-shadow: 1px 1px 2px -1px rgba(0,0,0,.28);
+}
+#snackbar{
+	visibility: hidden;
+	position: fixed;
+	min-width: 250px;
+	color: white;
+	background-color: #333;
+	text-align: center;
+	z-index: 1;
+	padding: 12px 18px;
+	bottom: 5%;
+	left: 50%;
+	font-size: 16px;
+	margin-left: -160px;
+	border-radius: 2px;
+}
+#snackbar.show{
+	visibility: visible;
+	animation: fadein .5s, fadeout .5s 2.5s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 5%; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 5%; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+
+
