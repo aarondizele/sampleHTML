@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="accordion.css">
+	<meta charset="utf-8">
+	<title>Accordion</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+	
+	<main>
+		
+		<button class="accordion">Section 1</button>
+		<div class="panel">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt obcaecati maiores error, placeat quam dolorum aut excepturi earum dolores ex ad culpa eum assumenda iste cupiditate unde facere fuga exercitationem.</p>
+		</div>
+
+		
+		<button class="accordion">Section 2</button>
+		<div class="panel">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt obcaecati maiores error, placeat quam dolorum aut excepturi earum dolores ex ad culpa eum assumenda iste cupiditate unde facere fuga exercitationem.</p>
+		</div>
+
+
+		<button class="accordion">Section 3</button>
+		<div class="panel">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt obcaecati maiores error, placeat quam dolorum aut excepturi earum dolores ex ad culpa eum assumenda iste cupiditate unde facere fuga exercitationem.</p>
+		</div>
+
+
+
+
+
+
+	</main>
+
+
+
+	<script>
+		
+	let acc = document.getElementsByClassName("accordion");
+	let i;
+
+	for (i = 0; i < acc.length; i++) {
+
+	  acc[i].onclick = function() {
+
+	    this.classList.toggle("active");
+
+	    let panel = this.nextElementSibling;
+
+	    if (panel.style.maxHeight){
+
+	      panel.style.maxHeight = null;
+
+	    } else {
+
+	      panel.style.maxHeight = panel.scrollHeight + "px";
+	    
+	    } 
+	  }
+	}
+
+	</script>
+
+
+</body>
+</html>

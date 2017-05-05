@@ -1,0 +1,56 @@
+*{
+	box-sizing: border-box;
+}
+html,
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+}
+main{
+	padding: 100px;
+}
+button.accordion{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	background: none;
+	border: none;
+	background: #eee;
+	width: 100%;
+	color: #444;
+	padding: 18px;
+	text-align: left;
+	outline: none;
+	transition: .2s;
+	border-bottom: 1px solid rgba(0,0,0,.04)
+}
+button.accordion.active, button.accordion:hover{
+	background-color: #ddd;
+	cursor: pointer;
+}
+button.accordion:after{
+	content: "\002B";
+	color: #999;
+	font-weight: bold;
+	float: right;
+	margin-left: 10px;
+}
+button.accordion.active:after {
+    content: "\2212";
+}
+div.panel{
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height .2s ease-out;
+	border-right: 1px solid rgba(0,0,0,.04);
+	border-left: 1px solid rgba(0,0,0,.04);
+}
+
+
+
+
+
